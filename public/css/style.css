@@ -162,7 +162,7 @@ h6 {
 .line {
 	height: 2px;
 	width: 50px;
-	background: #8e1efc;
+	background: #000;
 	display: block;
 	margin: 20px auto 20px;
 }
@@ -172,7 +172,7 @@ h6 {
 	left: 50%;
 	width: 150px;
 	height: 2px;
-	border-bottom: 2px dashed #8e1efc;
+	border-bottom: 2px dashed #000;
 	margin-left: -75px;
 }
 .sectioner-header p {
@@ -191,8 +191,8 @@ h6 {
 	width: 135px;
 	height: 135px;
 	border-radius: 100px;
-	background: #7a60ff;
-	background:  linear-gradient(to left, #7a60ff, #cd9ffa);
+	background: #020202;
+	background:  linear-gradient(to left, #020202, #181818);
 	color: #ffffff;
 	font-size: 50px;
 	line-height: 135px;
@@ -208,17 +208,17 @@ h6 {
 	margin: 0 auto;
 }
 .about-btn {
-	color: #8e1efc;
+	color: #181818;
 	padding: 10px 40px;
-	border: 2px solid #8e1efc;
+	border: 2px solid #181818;
 	border-radius: 7px;
 	margin-top: 30px;
 	display: inline-block;
 	font-size: 18px;
+	transition: ease-in-out 0.2s;
 }
 .about-btn:hover {
-	background:#8e1efc;
-	color:#ffffff;
+	background:#f6e71d;
 	text-decoration:none;
 }
 
@@ -317,10 +317,10 @@ h6 {
 	width: 50px;
 	height: 50px;
 	border-radius: 100px;
-	color: rgb(142, 30, 252);
+	color: #020202;
 	font-size: 18px;
 	line-height: 50px;
-	border: 1px solid rgb(142, 30, 252);
+	border: 1px solid #f6e71d
 }
 .team {
 	background: #fafafa;
@@ -334,14 +334,14 @@ h6 {
 	width: 70%;
 }
 .team-detail h4 {
-	color:rgb(142, 30, 252);
+	color:#f6e71d;
+	text-shadow: 1px 1px 2px #000;
 	margin-top: 20px;
 	font-size: 17px;
 	margin-bottom: 0px;
+
 }
 .testimonial {
-	background: #7a60ff;
-	background: linear-gradient(to left, #7a60ff, #cd9ffa);
 	padding:100px 0px;
 	position:relative;
 }
@@ -353,7 +353,6 @@ h6 {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: url(images/pattern.png);
 }
 .bx-prev {
 	left: -90px !important;
@@ -391,14 +390,14 @@ h6 {
 	float: left;
 	width: 75%;
 }
-.slider .title {
+.myslider .title {
 	display: block;
 	position: relative;
 	margin: 0 0 20px;
 	font-size: 1.125em;
 	line-height: 1.25;
 }
-.slider .title span {
+.myslider .title span {
 	display: block;
 	font-size: 1.5em;
 	font-weight: 700;
