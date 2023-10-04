@@ -218,6 +218,7 @@ h6 {
 	transition: ease-in-out 0.2s;
 }
 .about-btn:hover {
+	color: #fff;
 	background:#f6e71d;
 	text-decoration:none;
 }
