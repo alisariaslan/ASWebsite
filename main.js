@@ -11,9 +11,7 @@ var args = process.argv.slice(2);
 i18n.configure({
   locales: ['en', 'tr'],
   defaultLocale: 'en',
-  directory: './public/locales',
-  cookie: 'locale',
-  objectNotation: true,
+  directory: './public/locales'
 });
 
 //ENGINE
@@ -26,13 +24,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(i18n.init);
-
-//LOCALIZATION
-app.use((req, res, next) => {
-  const userLang = req.headers['accept-language'];
-  req.setLocale(userLang);
-  next();
-});
 
 //VIEW COUNT
 app.use(async (req, res, next) => {
