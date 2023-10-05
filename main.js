@@ -4,6 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var routes = require('./router/router');
 var i18n = require('i18n');
+var fs = require('fs/promises');
 
 //LOCALIZATION
 i18n.configure({
@@ -25,10 +26,25 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(i18n.init);
 
+//LOCALIZATION
 app.use((req, res, next) => {
   const userLang = req.headers['accept-language'];
   req.setLocale(userLang);
   next();
+});
+
+//VIEW COUNT
+app.use(async (req, res, next) => {
+  try {
+    let views = await fs.readFile("db.json", 'utf-8');
+    views = JSON.parse(views);
+    views.viewCount++;
+    await fs.writeFile("db.json", JSON.stringify(views, null, 2));
+    res.locals.viewCount = views.viewCount;
+    next();
+  } catch (error) {
+    next(error);
+  }
 });
 
 app.use(routes);
