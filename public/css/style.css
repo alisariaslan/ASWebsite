@@ -627,14 +627,14 @@ input {
 @media all and (max-width:991px) {
 	.navbar .navbar-collapse {
 		overflow: auto;
-		background: rgb(213, 198, 221);
+		background: #242424;
 		color: #fff !important;
 		text-align: center;
 		padding: 10px 0;
 	}
 
 	.nav-scroll .navbar-collapse {
-		background: #fff !important;
+		background: #f6e71d !important;
 	}
 
 	#contact_form {
