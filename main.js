@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var routes = require('./router/router');
 var i18n = require('i18n');
 var fs = require('fs/promises');
+var args = process.argv.slice(2);
 
 //LOCALIZATION
 i18n.configure({
@@ -49,14 +50,10 @@ app.use(async (req, res, next) => {
 
 app.use(routes);
 
-//DEFINITON FOR HOST AND PORT
-var port = 10101;
-var host = 'localhost';
-
 //START WEBSERVER
 function start_http() {
-  var server = app.listen(port, host, function () {
-    console.log('Web server started at -> http://%s:%s', host, port);
+  var server = app.listen(args[1], args[0], function () {
+    console.log('Web server started at -> http://%s:%s', args[0], args[1]);
   });
 }
 
