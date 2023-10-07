@@ -67,7 +67,7 @@ router.post('/message', (req, res) => {
     }
   });
 
-  res.render('index', { message: "Your message sent succesfully." });
+  res.status(200).render('index', { message: "Your message sent succesfully." });
 });
 
 
