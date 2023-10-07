@@ -6,6 +6,7 @@ var routes = require('./router/router');
 var i18n = require('i18n');
 var fs = require('fs/promises');
 var args = process.argv.slice(2);
+const { now } = require('./date');
 
 //LOCALIZATION
 i18n.configure({
@@ -44,7 +45,7 @@ app.use(routes);
 //START WEBSERVER
 function start_http() {
   var server = app.listen(args[1], args[0], function () {
-    console.log('Web server started at -> http://%s:%s', args[0], args[1]);
+    console.log(now+'Web server started at -> http://%s:%s', args[0], args[1]);
   });
 }
 
