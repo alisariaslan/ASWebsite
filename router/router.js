@@ -25,7 +25,7 @@ transporter.verify((err, success) => {
 //GET
 router.get('/', function (req, res, next) { res.render('index'); });
 
-router.post('/message', (req, res) => {
+router.post('/form_submit', (req, res) => {
   var name = req.body.name;
   var email = req.body.email;
   var subject = req.body.subject;
