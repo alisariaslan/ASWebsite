@@ -24,6 +24,9 @@ transporter.verify((err, success) => {
 
 //GET
 router.get('/', function (req, res, next) { res.render('index'); });
+router.get('/index', function (req, res, next) { res.render('index'); });
+router.get('/mail_sent', function (req, res, next) { res.render('mail_sent'); });
+router.get('/not_found', function (req, res, next) { res.render('not_found'); });
 
 router.post('/form_submit', (req, res) => {
   var name = req.body.name;
@@ -67,13 +70,13 @@ router.post('/form_submit', (req, res) => {
     }
   });
 
-  res.status(200).render('index', { message: "Your message sent succesfully." });
+  res.status(200).redirect('/mail_sent');
 });
 
 
-// Custom 404 route
 router.use((req, res, next) => {
-  res.status(404).render('index', { message: "Sorry, the requested page couldn't be found!" });
+  res.status(404);
+  res.redirect('/not_found');
 });
 
 module.exports = router;

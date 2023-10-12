@@ -79,6 +79,10 @@
     "storeheader":"Mağazalarımı Ziyaret Edin",
     "storecontent":"Güven ve saygı kolay kazanılmayan ve inşa etmesi uzun süren şeylerdir. Projelerimi resmi mağazalardan inceleyebilirsiniz.",
     "viewedstart":"Bu site toplam",
-    "viewedend":"kez görüntülendi."
-
+    "viewedend":"kez görüntülendi.",
+	"not_found_error":"404 - Sayfa Bulunamadı",
+	"not_found_content":"Aradığınız sayfa bulunamadı. Adresi yanlış girmiş olabilir misiniz? Anasayfaya dönmek için aşşağıdaki butonu kullanın.",
+	"go_back":"Geri dön",
+	"mail_sent_title":"Mesajınız başarıyla iletildi.",
+	"mail_sent_content":"Mesajları en kısa sürede cevaplamaya çalışıyorum. Mesajın bana ulaştığından emin olmak istiyorsanız mail kutunuzu kontrol edebilirsiniz. Otomatik olarak mesajı aldığıma dair bir maili size iletiyorum.  "
 }
