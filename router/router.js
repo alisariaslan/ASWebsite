@@ -44,7 +44,10 @@ router.get('/library/:appName', function (req, res, next) {
   const app_param = req.params.appName;
   var app_title = main.getlocal(app_param);
   var app_desc = main.getlocal(app_param + '_desc');
-  res.render('app', { app_title, app_desc, app_param});
+  if (app_title === app_param || app_desc === app_param + '_desc') {
+    return res.status(404).redirect('/not_found');
+  }
+  res.render('app', { app_title, app_desc, app_param });
 });
 
 router.post('/form_submit', (req, res) => {

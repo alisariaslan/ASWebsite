@@ -66,7 +66,7 @@
 
   <!-------About End------->
 
-  <section class="about section-padding prelative" data-scroll-index='1'>
+  <section class="about prelative" data-scroll-index='1'>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -76,41 +76,56 @@
             </h3>
           </div>
           <div class="section-content text-center">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <img src="images/apfitness.png"
-                    class="wow fadeIn" data-wow-delay="0.4s" width="100px" height="100px" />
-                  <h5>AP Fitness</h5>
-                  <p>
-                    <%=__('app1content')%>
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <img src="images/ceppos.png"
-                    class="wow fadeIn" data-wow-delay="0.6s" width="100px" height="100px" />
-                  <h5>Ceppos</h5>
-                  <p>
-                    <%=__('app2content')%>
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <img src="images/parkor.png"
-                    class="wow fadeIn" data-wow-delay="0.8s" width="100px" height="100px" />
-                  <h5>Parkor</h5>
-                  <p>
-                    <%=__('app3content')%>
-                  </p>
-                </div>
-              </div>
+            <div class="row" id="dynamicDivsContainer">
+             
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
- 
+
+  <script>
+    let dynamicContent = [];
+    const container = document.getElementById('dynamicDivsContainer');
+    async function fetchData() {
+      try {
+        const response = await fetch('links/<%= app_param %>.json');
+        const jsonData = await response.json();
+        dynamicContent = jsonData; // Assuming your JSON file is an array of objects
+        generateDynamicDivs();
+      } catch (error) {
+        console.error('Error fetching or parsing JSON:', error);
+      }
+    }
+    function generateDynamicDivs() {
+      dynamicContent.forEach(item => {
+        var param = '<%= app_param %>';
+        const dynamicDiv = document.createElement('div');
+        dynamicDiv.className = 'col-md-4';
+        dynamicDiv.innerHTML = `
+      <a href="${item.url}">
+        <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+          <img src="${item.img}" class="wow fadeIn" data-wow-delay="0.4s" width="100px" height="100px" />
+          <h5>${item.platform}</h5>
+        </div>
+      </a>`;
+        container.appendChild(dynamicDiv);
+      });
+    }
+    const filePath = 'links/<%= app_param %>.json';
+    fetch(filePath)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('File does not exist: links/<%= app_param %>.json');
+        }
+        fetchData();
+      })
+      .catch(error => {
+        console.error(error.message);
+      });
+  </script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
     integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"

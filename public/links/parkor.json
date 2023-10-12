@@ -1,0 +1,22 @@
+[
+    {
+        "img": "images/unity.png",
+        "platform": "WebPlayer",
+        "url": "https://play.sarsyazilim.com.tr/parkor"
+    },
+    {
+        "img": "images/win.png",
+        "platform": "Windows",
+        "url": "https://sarsyazilim.com.tr/share/ParkorWIN32.zip"
+    },
+    {
+        "img": "images/mac.png",
+        "platform": "MacOS",
+        "url": "https://sarsyazilim.com.tr/share/ParkorMAC.app.zip"
+    },
+    {
+        "img": "images/droid.png",
+        "platform": "Android",
+        "url": "https://sarsyazilim.com.tr/share/ParkorANDROID.zip"
+    }
+]

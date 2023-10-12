@@ -12,6 +12,7 @@ i18n.configure({
   defaultLocale: 'en',
   directory: './public/locales',
   cookie: 'lang',
+  savemissing: 'false'
 });
 app.use(function (req, res, next) {
   i18n.init(req, res);
