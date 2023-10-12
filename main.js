@@ -4,41 +4,23 @@ var app = express();
 var bodyParser = require('body-parser');
 var routes = require('./router/router');
 var i18n = require('i18n');
-var fs = require('fs/promises');
 var args = process.argv.slice(2);
-const { now } = require('./date');
+var { now } = require('./date');
+var path = require('path');
 
 //LOCALIZATION
 i18n.configure({
   locales: ['en', 'tr'],
   defaultLocale: 'en',
-  directory: './public/locales'
+  directory: './public/locales',
+  cookie: 'lang',
 });
 
 //ENGINE
 app.set('view engine', 'ejs');
-
-//USE
 app.use(express.static('public'));
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
-app.use(bodyParser.json());
-app.use(i18n.init);
 
-//VIEW COUNT
-app.use(async (req, res, next) => {
-  try {
-    let views = await fs.readFile("db.json", 'utf-8');
-    views = JSON.parse(views);
-    views.viewCount++;
-    await fs.writeFile("db.json", JSON.stringify(views, null, 2));
-    res.locals.viewCount = views.viewCount;
-    next();
-  } catch (error) {
-    next(error);
-  }
-});
+app.use(i18n.init);
 
 app.use(routes);
 

@@ -1,11 +1,12 @@
 var express = require('express')
 var router = express.Router();
 var nodemailer = require('nodemailer');
-const { myemail, mypassword } = require('.././config');
-const { now } = require('.././date');
+var { myemail, mypassword } = require('.././config');
+var { now } = require('.././date');
+var fs = require('fs/promises');
 
 // Create a transporter
-const transporter = nodemailer.createTransport({
+var transporter = nodemailer.createTransport({
   host: '127.0.0.1',
   port: 25,
   secure: false,
@@ -18,24 +19,42 @@ const transporter = nodemailer.createTransport({
   }
 });
 transporter.verify((err, success) => {
-  if (err) console.error(now+'ERROR at Transporter config -> '+err)
-  else console.log(now+'Transporter config is correct.');
+  if (err) console.error(now + 'ERROR at Transporter config -> ' + err)
+  else console.log(now + 'Transporter config is correct.');
 });
 
 //GET
-router.get('/', function (req, res, next) { res.render('index'); });
-router.get('/index', function (req, res, next) { res.render('index'); });
+router.get('/', function (req, res, next) {
+  res.redirect('/index');
+});
+router.get('/index', async function (req, res, next) {
+  let views = await fs.readFile("db.json", 'utf-8');
+  views = JSON.parse(views);
+  views.viewCount++;
+  await fs.writeFile("db.json", JSON.stringify(views, null, 2));
+  res.locals.viewCount = views.viewCount;
+  res.render('index');
+});
+
 router.get('/mail_sent', function (req, res, next) { res.render('mail_sent'); });
 router.get('/not_found', function (req, res, next) { res.render('not_found'); });
+router.get('/library', function (req, res, next) { res.render('library'); });
+router.get('/library/:appName', function (req, res, next) {
+  const appName = req.params.appName;
+  res.render('app', { appName: appName, i18n: res });
+});
+
+
+router.use('/library', express.static('../public'));
+router.use('/library/parkor', express.static('../public'));
+
 
 router.post('/form_submit', (req, res) => {
   var name = req.body.name;
   var email = req.body.email;
   var subject = req.body.subject;
   var message = req.body.message;
-
-  console.log(now+`Received form submission - Name: ${name}, Email: ${email}`);
-
+  console.log(now + `Received form submission - Name: ${name}, Email: ${email}`);
   // Email to SENDER
   var mailOptions = {
     from: myemail,
@@ -43,7 +62,6 @@ router.post('/form_submit', (req, res) => {
     subject: 'Your message has reached me.',
     text: 'Thank you for contacting me. I will respond to your message as soon as possible. This is an automatic reply.',
   };
-
   // Email to ME
   var mailOptions2 = {
     from: email,
@@ -51,32 +69,28 @@ router.post('/form_submit', (req, res) => {
     subject: subject,
     text: message,
   };
-
   // Send email to SENDER
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error(now+error.message);
+      console.error(now + error.message);
     } else {
-      console.log(now+'Email sent: ' + info.response);
+      console.log(now + 'Email sent: ' + info.response);
     }
   });
-
   // Send email to ME
   transporter.sendMail(mailOptions2, (error, info) => {
     if (error) {
-      console.error(now+ error.message);
+      console.error(now + error.message);
     } else {
-      console.log(now+'Email sent: ' + info.response);
+      console.log(now + 'Email sent: ' + info.response);
     }
   });
-
   res.status(200).redirect('/mail_sent');
 });
 
-
 router.use((req, res, next) => {
-  res.status(404);
-  res.redirect('/not_found');
+  if (res.status(404))
+    res.redirect('/not_found');
 });
 
 module.exports = router;

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%=__('library_title')%> - ASProjects
+  </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#020202">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="icon" type="image/x-icon" href="../images/feather.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container"> <a class="navbar-brand navbar-logo" href="/index"> <img src="../images/signature.png"
+          alt="signature" class="logo-1" width="160" height="40"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="fas fa-bars"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">
+              <%=__('library_title2')%>
+            </a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+  <!-------Banner Start------->
+  <section class="banner" data-scroll-index='0'>
+    <div class="banner-overlay">
+      <div class="container">
+        <div class="row">
+        </div>
+      </div>
+    </div>
+    <span class="svg-wave"> <img class="svg-hero" src="images/applight-wave.svg"> </span>
+  </section>
+
+
+  <!-------Banner End------->
+
+  <!-------About End------->
+
+  <section class="about section-padding prelative" data-scroll-index='1'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>
+              <%=__('library_title')%>
+            </h3>
+            <span class="line"></span>
+            <p>
+              <%=__('library_content')%>
+            </p>
+          </div>
+          <div class="section-content text-center">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <img src="images/ceppos.png"
+                    class="wow fadeIn" data-wow-delay="0.6s" width="100px" height="100px" />
+                  <h5>Ceppos</h5>
+                  <p>
+                    <%=__('app2content')%>
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <a href="/library/parkor">
+                  <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <img src="images/parkor.png"
+                      class="wow fadeIn" data-wow-delay="0.8s" width="100px" height="100px" />
+                    <h5>Parkor</h5>
+                    <p>
+                      <%=__('app3content')%>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <!-- scrollIt js -->
+  <script src="js/scrollIt.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+    wow = new WOW();
+    wow.init();
+    $(document).ready(function (e) {
+
+      $('#video-icon').on('click', function (e) {
+        e.preventDefault();
+        $('.video-popup').css('display', 'flex');
+        $('.iframe-src').slideDown();
+      });
+      $('.video-popup').on('click', function (e) {
+        var $target = e.target.nodeName;
+        var video_src = $(this).find('iframe').attr('src');
+        if ($target != 'IFRAME') {
+          $('.video-popup').fadeOut();
+          $('.iframe-src').slideUp();
+          $('.video-popup iframe').attr('src', " ");
+          $('.video-popup iframe').attr('src', video_src);
+        }
+      });
+
+      $('.slider').bxSlider({
+        pager: false
+      });
+    });
+
+    $(window).on("scroll", function () {
+
+      var bodyScroll = $(window).scrollTop(),
+        navbar = $(".navbar");
+
+      if (bodyScroll > 50) {
+        $('.navbar-logo img').attr('src', 'images/signature_black.png');
+        navbar.addClass("nav-scroll");
+
+      } else {
+        $('.navbar-logo img').attr('src', 'images/signature.png');
+        navbar.removeClass("nav-scroll");
+      }
+
+    });
+    $(window).on("load", function () {
+      var bodyScroll = $(window).scrollTop(),
+        navbar = $(".navbar");
+
+      if (bodyScroll > 50) {
+        $('.navbar-logo img').attr('src', 'images/logo-black.png');
+        navbar.addClass("nav-scroll");
+      } else {
+        $('.navbar-logo img').attr('src', 'images/logo-white.png');
+        navbar.removeClass("nav-scroll");
+      }
+
+      $.scrollIt({
+
+        easing: 'swing',      // the easing function for animation
+        scrollTime: 900,       // how long (in ms) the animation takes
+        activeClass: 'active', // class given to the active nav element
+        onPageChange: null,    // function(pageIndex) that is called when page is changed
+        topOffset: -63
+      });
+    });
+
+  </script>
+</body>
+
+</html>

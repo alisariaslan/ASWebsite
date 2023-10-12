@@ -84,5 +84,8 @@
 	"not_found_content":"Aradığınız sayfa bulunamadı. Adresi yanlış girmiş olabilir misiniz? Anasayfaya dönmek için aşşağıdaki butonu kullanın.",
 	"go_back":"Geri dön",
 	"mail_sent_title":"Mesajınız başarıyla iletildi.",
-	"mail_sent_content":"Mesajları en kısa sürede cevaplamaya çalışıyorum. Mesajın bana ulaştığından emin olmak istiyorsanız mail kutunuzu kontrol edebilirsiniz. Otomatik olarak mesajı aldığıma dair bir maili size iletiyorum.  "
+	"mail_sent_content":"Mesajları en kısa sürede cevaplamaya çalışıyorum. Mesajın bana ulaştığından emin olmak istiyorsanız mail kutunuzu kontrol edebilirsiniz. Otomatik olarak mesajı aldığıma dair bir maili size iletiyorum.",
+	"library_title":"Kütüphane",
+	"library_title2":"Tüm Projeler",
+	"library_content":"Her proje her işletim sisteminde çalışmayabilir. Lütfen daha farklı seçeneklere göz atın. Sistem gereksinimlerini inceleyin."
 }

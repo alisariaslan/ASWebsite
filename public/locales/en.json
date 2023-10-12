@@ -80,9 +80,12 @@
 	"storecontent": "Trust and respect are not earned immediately and can take a long time to build. You can check my projects in official stores.",
 	"viewedstart": "This site has been viewed",
 	"viewedend": "times in total.",
-	"not_found_error":"404 - Not Found",
+	"not_found_error": "404 - Not Found",
 	"not_found_content": "The page you were looking for was not found. Could you have entered the address incorrectly? Use the button below to return to the home page.",
 	"go_back": "Return",
-	"mail_sent_title":"Your message has been delivered successfully.",
-	"mail_sent_content":"I try to answer messages as soon as possible. If you want to make sure that the message reached me, you can check your mailbox. I will automatically send you an e-mail confirming that I received the message."
+	"mail_sent_title": "Your message has been delivered successfully.",
+	"mail_sent_content": "I try to answer messages as soon as possible. If you want to make sure that the message reached me, you can check your mailbox. I will automatically send you an e-mail confirming that I received the message.",
+	"library_title": "Library",
+	"library_title2": "All Projects",
+	"library_content": "Not every project may work on every operating system. Please take a look at other options. Review system requirements."
 }
