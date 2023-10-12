@@ -86,6 +86,10 @@
 	"mail_sent_title": "Your message has been delivered successfully.",
 	"mail_sent_content": "I try to answer messages as soon as possible. If you want to make sure that the message reached me, you can check your mailbox. I will automatically send you an e-mail confirming that I received the message.",
 	"library_title": "Library",
-	"library_title2": "All Projects",
-	"library_content": "Not every project may work on every operating system. Please take a look at other options. Review system requirements."
+	"library_title2": "Go to Developer Page",
+	"library_content": "Not every project may work on every operating system. Please take a look at other options. Review system requirements.",
+	"parkor": "Parkor - 2D Adventure, Horror",
+	"parkor_desc":"It was a morning like any other. Jack woke up. Good morning buddy. Jack was an ordinary mature person who lived in the city, away from his family and farm life. Towards the middle of the day, people noticed something in the sky. It looked like a meteorite. When the stone hits the earth, time stops as if everything was a dream. Jack wakes up again. This time it is night and he sees something on the street...",
+	"play_now":"Play Now",
+	"backto_library":"Return to Library"
 }

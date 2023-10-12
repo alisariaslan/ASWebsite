@@ -4,6 +4,7 @@ var nodemailer = require('nodemailer');
 var { myemail, mypassword } = require('.././config');
 var { now } = require('.././date');
 var fs = require('fs/promises');
+var main = require('../main');
 
 // Create a transporter
 var transporter = nodemailer.createTransport({
@@ -40,14 +41,11 @@ router.get('/mail_sent', function (req, res, next) { res.render('mail_sent'); })
 router.get('/not_found', function (req, res, next) { res.render('not_found'); });
 router.get('/library', function (req, res, next) { res.render('library'); });
 router.get('/library/:appName', function (req, res, next) {
-  const appName = req.params.appName;
-  res.render('app', { appName: appName, i18n: res });
+  const app_param = req.params.appName;
+  var app_title = main.getlocal(app_param);
+  var app_desc = main.getlocal(app_param + '_desc');
+  res.render('app', { app_title, app_desc, app_param});
 });
-
-
-router.use('/library', express.static('../public'));
-router.use('/library/parkor', express.static('../public'));
-
 
 router.post('/form_submit', (req, res) => {
   var name = req.body.name;

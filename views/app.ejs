@@ -2,8 +2,8 @@
 <html>
 
 <head>
-  <title>
-    <%= appName %>
+  <title>ASProject -
+    <%= app_title %>
   </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,7 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg" style="position:absolute;">
     <div class="container"> <a class="navbar-brand navbar-logo" href="/index"> <img src="images/signature.png"
           alt="signature" class="logo-1" width="160" height="40"> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -31,24 +31,8 @@
           class="fas fa-bars"></span> </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">
-              <%=__('intro')%>
-            </a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">
-              <%=__('whatido')%>
-            </a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">XOX</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">
-              <%=__('articles')%>
-            </a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">
-              <%=__('channel')%>
-            </a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">
-              <%=__('faq')%>
-            </a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">
-              <%=__('contact')%>
+          <li class="nav-item"> <a class="nav-link" href="/library" data-scroll-nav="0">
+              <%=__('backto_library')%>
             </a> </li>
         </ul>
       </div>
@@ -62,27 +46,16 @@
         <div class="row">
           <div class="col-md-8 col-sm-12">
             <div class="banner-text">
-              <h2 class="white">Ali SARIASLAN</h2>
-              <h6 class="white">
-                <%=__('cross')%>: <a href="http://github.com/alisariaslan" target="_blank" rel="dofollow"
-                    class="weblink">GitHub</a>.
-              </h6>
+              <h2 class="white">
+                <%= app_title %>
+              </h2>
               <p class="banner-text white">
-                <%=__('since')%>
+                <%= app_desc %>
               </p>
-              <ul>
-                <li><a target="_blank" href="https://ig.me/alisariasln"><img src="images/insta.png" class="wow fadeInUp"
-                      data-wow-delay="0.4s" /></a></li>
-                <li><a target="_blank" href="https://t.me/alisariaslan"><img src="images/telegram.png"
-                      class="wow fadeInUp" data-wow-delay="0.7s" /></a></li>
-                <li><a target="_blank" href="https://wa.me/905374639493"><img src="images/wp.png" class="wow fadeInUp"
-                      data-wow-delay="0.7s" /></a></li>
-                <li><a target="_blank" href="https://linked.in/alisariaslan"><img style="padding: 4px;"
-                      src="images/linkedin.png" class="wow fadeInUp" data-wow-delay="0.7s" /></a></li>
-              </ul>
             </div>
           </div>
-          <div class="col-md-4 col-sm-12"> <img src="images/me.png" class="img-fluid wow fadeIn banner-image" /> </div>
+          <div class="col-md-4 col-sm-12"> <img src="images/<%= app_param %>_icon.png"
+              class="img-fluid wow fadeIn banner-image" /> </div>
         </div>
       </div>
     </div>
@@ -99,12 +72,8 @@
         <div class="col-md-12">
           <div class="sectioner-header text-center">
             <h3>
-              <%=__('whatidoheader')%>
+              <%=__('play_now')%>
             </h3>
-            <span class="line"></span>
-            <p>
-              <%=__('whatidocontent')%>
-            </p>
           </div>
           <div class="section-content text-center">
             <div class="row">
@@ -136,458 +105,12 @@
                 </div>
               </div>
             </div>
-
-            <a href="/library" class="about-btn">
-              <%=__('whatidobutton')%>
-            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-------About End------->
-
-  <!-------Video Start------->
-
-  <section class="video-section prelative text-center white">
-    <img src="images/island.jpg" alt="Background Image" class="section-background">
-    <div class="section-padding video-overlay ">
-
-      <div class="overlay-text">
-        <h2>
-          <%=__('bannerheader')%>
-        </h2>
-        <h3>
-          <%=__('bannercontent')%>
-        </h3>
-      </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <i class="fa fa-play" id="video-icon" aria-hidden="true"></i>
-      <div class="video-popup">
-        <div class="video-src">
-          <div class="iframe-src">
-            <iframe src="https://www.youtube.com/embed/Vmtt8tNdohY" title="<%=__('videotitle')%>" frameborder="0"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-------Video End------->
-
-  <!-------Features Start------->
-  <section class="feature section-padding" data-scroll-index='2'>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sectioner-header text-center">
-            <h3>
-              <%=__('famousheader')%>
-            </h3>
-            <span class="line"></span>
-            <p>
-              <%=__('famouscontent')%>
-            </p>
-          </div>
-          <div class="section-content text-center">
-            <div class="row">
-              <div class="col-md-4 col-sm-12">
-                <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
-                  <div class="media-body text-right media-right-margin">
-                    <h5>
-                      <%=__('upperleftheader')%>
-                    </h5>
-                    <p>
-                      <%=__('upperleftcontent')%>
-                    </p>
-                  </div>
-                  <div class="media-right icon-border"> <span class="fa fa-user" aria-hidden="true"></span> </div>
-                </div>
-                <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
-                  <div class="media-body text-right media-right-margin">
-                    <h5>
-                      <%=__('middleleftheader')%>
-                    </h5>
-                    <p>
-                      <%=__('middleleftcontent')%>
-                    </p>
-                  </div>
-                  <div class="media-right icon-border"> <span class="fa fa-flag" aria-hidden="true"></span>
-                  </div>
-                </div>
-                <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
-                  <div class="media-body text-right media-right-margin">
-                    <h5>
-                      <%=__('lowerleftheader')%>
-                    </h5>
-                    <p>
-                      <%=__('lowerleftcontent')%>
-                    </p>
-                  </div>
-                  <div class="media-right icon-border"> <span class="fa fa-pen" aria-hidden="true"></span> </div>
-                </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block d-lg-block">
-                <div class="feature-mobile"> <img src="images/xox.png" class="img-fluid wow fadeInUp" /> </div>
-              </div>
-              <div class="col-md-4 col-sm-12">
-                <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
-                  <div class="media-left icon-border media-right-margin"> <span class="fa fa-users"
-                      aria-hidden="true"></span> </div>
-                  <div class="media-body text-left">
-                    <h5>
-                      <%=__('upperrightheader')%>
-                    </h5>
-                    <p>
-                      <%=__('upperrightcontent')%>
-                    </p>
-                  </div>
-                </div>
-                <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
-                  <div class="media-left icon-border media-right-margin"> <span class="fa fa-gamepad"
-                      aria-hidden="true"></span> </div>
-                  <div class="media-body text-left">
-                    <h5>
-                      <%=__('middlerightheader')%>
-                    </h5>
-                    <p>
-                      <%=__('middlerightcontent')%>
-                    </p>
-                  </div>
-                </div>
-                <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
-                  <div class="media-left icon-border media-right-margin"> <span class="fa fa-star"
-                      aria-hidden="true"></span> </div>
-                  <div class="media-body text-left">
-                    <h5>
-                      <%=__('lowerrightheader')%>
-                    </h5>
-                    <p>
-                      <%=__('lowerrightcontent')%>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-------Features End------->
-
-  <!-------Team Start------->
-  <section class="team section-padding" data-scroll-index='3'>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sectioner-header text-center">
-            <h3>
-              <%=__('articleheader')%>
-            </h3>
-            <span class="line"></span>
-            <p>
-              <%=__('articlecontent')%>
-            </p>
-          </div>
-          <div class="section-content text-center">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="team-detail wow bounce" data-wow-delay="0.2s"> <img src="images/document.png"
-                    class="img-fluid" />
-                  <h4>
-                    <%=__('leftarticleheader')%>
-                  </h4>
-                  <p>
-                    <%=__('leftarticlecontent')%>
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="team-detail wow bounce" data-wow-delay="0.4s"> <img src="images/document.png"
-                    class="img-fluid" />
-                  <h4>
-                    <%=__('middlearticleheader')%>
-                  </h4>
-                  <p>
-                    <%=__('middlearticlecontent')%>
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="team-detail wow bounce" data-wow-delay="0.6s"> <img src="images/document.png"
-                    class="img-fluid" />
-                  <h4>
-                    <%=__('rightarticleheader')%>
-                  </h4>
-                  <p>
-                    <%=__('rightarticlecontent')%>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-------Team End------->
-
-  <!-------Testimonial Start------->
-  <section class="testimonial section-padding" data-scroll-index='4'>
-    <img src="images/datatraveler.jpg" alt="Background Image" class="section-background">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sectioner-header text-center white">
-            <h3 style="text-shadow: 0px 0px 8px #000;">
-              <%=__('channelheader')%>
-            </h3>
-            <span class="line"></span>
-            <p class="white" style="text-shadow: 0px 0px 8px #000;">
-              <%=__('channelcontent')%>
-            </p>
-          </div>
-
-          <div class="section-content">
-            <div class="row">
-              <div class="offset-md-2 col-md-8 col-sm-12">
-                <div class="myslider"
-                  style="opacity: .9; background-color: #eaeaea; overflow: auto; padding-bottom: 16px; border-radius: 20px;">
-                  <div class="slider-item">
-                    <div class="test-img"><img src="images/traveler.png" alt="Placeholder" width="157" height="157" >
-                    </div>
-                    <div class="test-text"><span class="title"><span>
-                          <%=__('channelheader2')%>
-                        </span>
-                        <%=__('channelheader3')%>
-                      </span>
-                      <%=__('channelcontent2')%>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-------Testimonial End------->
-
-  <!-------FAQ Start------->
-  <section class="faq section-padding prelative" data-scroll-index='5'>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sectioner-header text-center">
-            <h3>
-              <%=__('faqheader')%>
-            </h3>
-            <span class="line"></span>
-            <p>
-              <%=__('faqcontent')%>
-            </p>
-          </div>
-          <div class="section-content">
-            <div class="row">
-              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.4s">
-                <h4>
-                  <%=__('faqheader1')%>
-                </h4>
-                <p>
-                  <%=__('faqheader1c')%>
-                </p>
-              </div>
-              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.2s">
-                <h4>
-                  <%=__('faqheader4')%>
-                </h4>
-                <p>
-                  <%=__('faqheader4c')%>
-                </p>
-              </div>
-              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.4s">
-                <h4>
-                  <%=__('faqheader2')%>
-                </h4>
-                <p>
-                  <%=__('faqheader2c')%>
-                </p>
-              </div>
-              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.6s">
-                <h4>
-                  <%=__('faqheader5')%>
-                </h4>
-                <p>
-                  <%=__('faqheader5c')%>
-                </p>
-              </div>
-              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.2s">
-                <h4>
-                  <%=__('faqheader3')%>
-                </h4>
-                <p>
-                  <%=__('faqheader3c')%>
-                </p>
-              </div>
-              <div class="col-md-6 faq-content wow fadeInUp" data-wow-delay="0.6s">
-                <h4>
-                  <%=__('faqheader6')%>
-                </h4>
-                <p>
-                  <%=__('faqheader6c')%>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-------FAQ End------->
-
-  <!-------Contact Start------->
-  <section class="contact section-padding" data-scroll-index='6'>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sectioner-header text-center">
-            <h3>
-              <%=__('contactheader')%>
-            </h3>
-            <span class="line"></span>
-            <p>
-              <%=__('contactcontent')%>
-            </p>
-          </div>
-          <div class="section-content">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-7">
-                <form id="contact_form" action="/form_submit" method="post">
-                  <div class="row">
-                    <div class="col">
-                      <input type="text" id="name" class="form-input w-100" name="name"
-                        placeholder="<%=__('fullname')%>" required>
-                    </div>
-                    <div class="col">
-                      <input type="email" id="email" class="form-input w-100" name="email"
-                        placeholder="<%=__('email')%>" required>
-                    </div>
-                  </div>
-                  <input type="text" id="subject" class="form-input w-100" name="subject"
-                    placeholder="<%=__('subject')%>">
-                  <textarea class="form-input w-100" id="message" placeholder="<%=__('message')%>"
-                    name="message"></textarea>
-                  <button class="btn-grad w-100 text-uppercase" type="submit" name="button">
-                    <%=__('submit')%>
-                  </button>
-                </form>
-              </div>
-              <div class="col-sm-12 col-md-12 col-lg-5">
-                <div class="contact-info white">
-                  <div class="contact-item media"> <i
-                      class="fa fa-map-marker-alt media-left media-right-margin-width"></i>
-                    <div class="media-body">
-                      <p class="text-uppercase">
-                        <%=__('address')%>
-                      </p>
-                      <p class="text-uppercase">
-                        <%=__('addresscontent')%>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="contact-item media"> <i class="fa fa-mobile media-left media-right-margin-width"></i>
-                    <div class="media-body">
-                      <p class="text-uppercase">
-                        <%=__('phone')%>
-                      </p>
-                      <p class="text-uppercase"><a class="text-black" href="tel:+905374639493">
-                          <%=__('phonecontent')%>
-                        </a> </p>
-                    </div>
-                  </div>
-                  <div class="contact-item media"> <i class="fa fa-envelope media-left media-right-margin-width"></i>
-                    <div class="media-body">
-                      <p class="text-uppercase">
-                        <%=__('mail')%>
-                      </p>
-                      <p class="text-uppercase"><a class="text-black"
-                          href="mailto:alisariaslan@mail.sarsyazilim.com.tr">
-                          <%=__('mailcontent')%>
-                        </a> </p>
-                    </div>
-                  </div>
-                  <div class="contact-item media"> <i class="fa fa-clock media-left media-right-margin-width"></i>
-                    <div class="media-body">
-                      <p class="text-uppercase">
-                        <%=__('hours')%>
-                      </p>
-                      <p class="text-uppercase">
-                        <%=__('hourscontent')%>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-------Contact End------->
-
-  <!-------Download End------->
-  <section class="download section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sectioner-header text-center white">
-            <h3>
-              <%=__('storeheader')%>
-            </h3>
-            <span class="line"></span>
-            <p class="white">
-              <%=__('storecontent')%>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-12">
-          <div class="section-content text-center">
-            <ul>
-              <li><a href="#"><img src="images/appstore.png" class="wow fadeInUp" data-wow-delay="0.4s" /></a></li>
-              <li><a href="#"><img src="images/playstore.png" class="wow fadeInUp" data-wow-delay="0.7s" /></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-------Download End------->
-
-  <footer class="footer-copy">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <p>
-           FOOTER
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
+ 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
     integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
@@ -595,68 +118,7 @@
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
   <!-- scrollIt js -->
   <script src="js/scrollIt.min.js"></script>
-  <script>
-    $(document).ready(function (e) {
 
-      $('#video-icon').on('click', function (e) {
-        e.preventDefault();
-        $('.video-popup').css('display', 'flex');
-        $('.iframe-src').slideDown();
-      });
-      $('.video-popup').on('click', function (e) {
-        var $target = e.target.nodeName;
-        var video_src = $(this).find('iframe').attr('src');
-        if ($target != 'IFRAME') {
-          $('.video-popup').fadeOut();
-          $('.iframe-src').slideUp();
-          $('.video-popup iframe').attr('src', " ");
-          $('.video-popup iframe').attr('src', video_src);
-        }
-      });
-
-      $('.slider').bxSlider({
-        pager: false
-      });
-    });
-
-    $(window).on("scroll", function () {
-
-      var bodyScroll = $(window).scrollTop(),
-        navbar = $(".navbar");
-
-      if (bodyScroll > 50) {
-        $('.navbar-logo img').attr('src', 'images/signature_black.png');
-        navbar.addClass("nav-scroll");
-
-      } else {
-        $('.navbar-logo img').attr('src', 'images/signature.png');
-        navbar.removeClass("nav-scroll");
-      }
-
-    });
-    $(window).on("load", function () {
-      var bodyScroll = $(window).scrollTop(),
-        navbar = $(".navbar");
-
-      if (bodyScroll > 50) {
-        $('.navbar-logo img').attr('src', 'images/logo-black.png');
-        navbar.addClass("nav-scroll");
-      } else {
-        $('.navbar-logo img').attr('src', 'images/logo-white.png');
-        navbar.removeClass("nav-scroll");
-      }
-
-      $.scrollIt({
-
-        easing: 'swing',      // the easing function for animation
-        scrollTime: 900,       // how long (in ms) the animation takes
-        activeClass: 'active', // class given to the active nav element
-        onPageChange: null,    // function(pageIndex) that is called when page is changed
-        topOffset: -63
-      });
-    });
-
-  </script>
 </body>
 
 </html>
