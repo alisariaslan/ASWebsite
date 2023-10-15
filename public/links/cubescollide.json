@@ -1,0 +1,18 @@
+[
+
+    {
+        "img": "images/win.png",
+        "platform": "Windows",
+        "url": "https://sarsyazilim.com.tr/share/CubesCollideWIN32.zip"
+    },
+    {
+        "img": "images/mac.png",
+        "platform": "MacOS",
+        "url": "https://sarsyazilim.com.tr/share/CubesCollideMAC.app.zip"
+    },
+    {
+        "img": "images/droid.png",
+        "platform": "Android",
+        "url": "https://sarsyazilim.com.tr/share/CubesCollideANDROID.zip"
+    }
+]

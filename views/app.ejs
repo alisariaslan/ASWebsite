@@ -52,6 +52,18 @@
               <p class="banner-text white">
                 <%= app_desc %>
               </p>
+              <p class="banner-text white supported-langs">
+                <%=__('supported_langs')%>
+              </p>
+              <script>
+                var cubescollide_langs = "<%= app_langs %>"; // Örnek olarak metni değiştirebilirsin
+                var langsArray = cubescollide_langs.split(",");
+                for (var i = 0; i < langsArray.length; i++) {
+                  var langBadge = document.createElement("img");
+                  langBadge.src = "https://img.shields.io/badge/-" + langsArray[i] + "-000000?style=flat&logo=" + langsArray[i].toLowerCase();
+                  document.querySelector(".supported-langs").appendChild(langBadge);
+                }
+              </script>
             </div>
           </div>
           <div class="col-md-4 col-sm-12"> <img src="images/<%= app_param %>_icon.png"
@@ -77,7 +89,7 @@
           </div>
           <div class="section-content text-center">
             <div class="row" id="dynamicDivsContainer">
-             
+
             </div>
           </div>
         </div>
@@ -104,7 +116,7 @@
         const dynamicDiv = document.createElement('div');
         dynamicDiv.className = 'col-md-4';
         dynamicDiv.innerHTML = `
-      <a href="${item.url}">
+      <a href="${item.url}" target="_blank">
         <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
           <img src="${item.img}" class="wow fadeIn" data-wow-delay="0.4s" width="100px" height="100px" />
           <h5>${item.platform}</h5>
