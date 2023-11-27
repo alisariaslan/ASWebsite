@@ -70,50 +70,29 @@
           </div>
           <div class="section-content text-center">
             <div class="row">
-              <div class="col-md-4">
-                <a href="/library/ceppos">
-                  <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <img src="images/ceppos.png"
-                      class="wow fadeIn" data-wow-delay="0.6s" width="100px" height="100px" />
-                    <h5>Ceppos</h5>
-                    <p>
-                      <%=__('app2content')%>
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="/library/parkor">
-                  <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <img src="images/parkor.png"
-                      class="wow fadeIn" data-wow-delay="0.8s" width="100px" height="100px" />
-                    <h5>Parkor</h5>
-                    <p>
-                      <%=__('app3content')%>
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="/library/cubescollide">
-                  <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <img src="images/cubescollide.png"
-                      class="wow fadeIn" data-wow-delay="0.8s" width="100px" height="100px" />
-                    <h5>CubesCollide</h5>
-                    <p>
-                      <%=__('app4content')%>
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-md-4">
-                <a href="/library/pakacraft">
-                  <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <img src="images/pakacraft.png"
-                      class="wow fadeIn" data-wow-delay="0.8s" width="100px" height="100px" />
-                    <h5>Pakacraft</h5>
-                    <p>
-                      <%=__('app5content')%>
-                    </p>
-                  </div>
-                </a>
-              </div>
+              <% for (let app of app_list) { %>
+                <div class="col-md-4">
+                  <a href="/library/<%= app.key %>">
+                    <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                      <img src="<%= app.library_icon%>" class="wow fadeIn" data-wow-delay="0.6s" width="100px"
+                        height="100px" />
+                        <% 
+                        let langIndex = app['locales'].findIndex(l => l.key === browser_lang);
+                        if(langIndex < 0)
+                          langIndex = 0;
+                        var short_title = app['locales'][langIndex].short_title;
+                        var short_desc = app['locales'][langIndex].short_desc;
+                        %>
+                      <h5>
+                        <%= short_title %>
+                      </h5>
+                      <p>
+                        <%= short_desc %>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <% } %>
             </div>
           </div>
         </div>

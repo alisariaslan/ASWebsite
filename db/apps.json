@@ -1,0 +1,182 @@
+[
+    {
+        "key": "ceppos",
+        "library_icon": "images/library/ceppos.png",
+        "banner_icon": "images/banner/ceppos.png",
+        "supported_langs": "tr",
+        "locales": [
+            {
+                "key": "en",
+                "short_title": "Ceppos",
+                "long_title": "Ceppos - Franchising Analysis and Report",
+                "short_desc": "A cross-platform application for the ERP company called Desen. It is the mobile version of the POS program used for restaurants.",
+                "long_desc": "Ceppos Restaurant Reporting and Analysis application creates an analysis environment thanks to YemekPOS restaurant automation. It provides detailed analysis for franchise businesses. YemekPOS has been serving in the sector since 2012 with the aim of meeting the needs of all stakeholders in the sector end-to-end."
+            },
+            {
+                "key": "tr",
+                "short_title": "Ceppos",
+                "long_title": "Ceppos - Franchise Analiz ve Raporlama",
+                "short_desc": "Desen adlı ERP şirketinin mobil uygulaması. Restoranların kullandığı POS yazılımlarının mobil versiyonu.",
+                "long_desc": "Ceppos Restoran Raporlama ve Analiz uygulaması, YemekPOS restoran otomasyonu sayesinde analiz ortamı oluşturur. Franchise işletmeler için detaylı analiz sağlar. Sektördeki tüm paydaşların ihtiyaçlarını uçtan uca karşılamak hedefi ile YemekPOS 2012 yılından beri sektörde hizmet vermektedir."
+            }
+        ],
+        "resources": [
+            {
+                "img": "images/ios.png",
+                "platform": "IOS",
+                "url": "https://apps.apple.com/tr/app/cep-pos/id1586875041"
+            },
+            {
+                "img": "images/droid.png",
+                "platform": "Android",
+                "url": "https://play.google.com/store/apps/details?id=com.qrposmenumobil"
+            },
+            {
+                "img": "https://www.yemekpos.com/assets/images/Logo_177x47.svg",
+                "platform": "YemekPOS",
+                "url": "https://www.yemekpos.com/"
+            }
+        ]
+    },
+    {
+        "key": "parkor",
+        "library_icon": "images/library/parkor.png",
+        "banner_icon": "images/banner/parkor.png",
+        "supported_langs": "en,tr",
+        "locales": [
+            {
+                "key": "en",
+                "short_title": "Parkov",
+                "long_title": "Parkov - 2D Adventure, Horror",
+                "short_desc": "Two-dimensional cross-platform adventure, horror and thriller game. An experience with a simple story flow and lots of creatures.",
+                "long_desc": "It was a morning like any other. Jack woke up. Good morning buddy. Jack was an ordinary mature person who lived in the city, away from his family and farm life. Towards the middle of the day, people noticed something in the sky. It looked like a meteorite. When the stone hits the earth, time stops as if everything was a dream. Jack wakes up again. This time it is night and he sees something on the street..."
+            },
+            {
+                "key": "tr",
+                "short_title": "Parkov",
+                "long_title": "Parkov - 2D Macera, Korku",
+                "short_desc": "İki boyutlu çapraz-platform macera ve gerilim oyunu. Basit bir hikaye akışı ve bir çok yaratığa ev sahipliği yapıyor.",
+                "long_desc": "Her zamanki gibi bir sabahtı. Jack uyandı. Günaydın Dostum. Jack şehirde ailesinden ve çiftlik hayatından uzak yaşayan sıradan olgun bir insandı. Günün ortalarına doğru insanlar gökyüzünde bir şey fark etti. Bu bir göktaşına benziyordu. Taşın yeryüzüne çarpmasıyla beraber sanki her şey bir anda rüyaymışçasına zaman durur. Jack yeniden uyanır. Bu sefer gecedir ve sokakta bir şey görür..."
+            }
+        ],
+        "resources": [
+            {
+                "img": "images/unity.png",
+                "platform": "WebPlayer",
+                "url": "https://play.sarsyazilim.com.tr/parkor"
+            },
+            {
+                "img": "images/win.png",
+                "platform": "Windows",
+                "url": "https://sarsyazilim.com.tr/share/ParkorWIN32.zip"
+            },
+            {
+                "img": "images/mac.png",
+                "platform": "MacOS",
+                "url": "https://sarsyazilim.com.tr/share/ParkorMAC.app.zip"
+            },
+            {
+                "img": "images/droid.png",
+                "platform": "Android",
+                "url": "https://sarsyazilim.com.tr/share/ParkorANDROID.zip"
+            }
+        ]
+    },
+    {
+        "key": "cubescollide",
+        "library_icon": "images/library/cubescollide.png",
+        "banner_icon": "images/banner/cubescollide.png",
+        "supported_langs": "en",
+        "locales": [
+            {
+                "key": "en",
+                "short_title": "CubesCollide",
+                "long_title": "CubesCollide - Cubes are Colliding!",
+                "short_desc": "Three-dimensional cross-platform collision game. Avoid the other cubes to be eaten!",
+                "long_desc": "CubeCollide is a simple three-dimensional game. Your goal is to reach the target by ensuring that the cube you control survives by avoiding other cubes. While doing this, you should pay attention to your size and not be eaten by other cubes. Visual calculation and a good map command are everything."
+            },
+            {
+                "key": "tr",
+                "short_title": "CubesCollide",
+                "long_title": "CubesCollide - Küpler Çarpışıyor!",
+                "short_desc": "Üç boyutlu çapraz-platform çarpışma oyunu. Hayatta kalmak ve yenmemek için diğer külerden kaçının!",
+                "long_desc": "CubeCollide basit üç boyutlu bir oyundur. Amacınız kontrol ettiğiniz küpü diğer küplerden kaçınmasıyla hayatta kalmasını sağlayarak hedefe ulaşması amacını gerçekleştirmektir. Bunu yaparken boyutunuza dikkat etmeli ve diğer küpler tarafından yenmemelisiniz. Görsel hesaplama ve iyi bir harita hakimiyeti herşeydir."
+            }
+        ],
+        "resources": [
+            {
+                "img": "images/win.png",
+                "platform": "Windows",
+                "url": "https://sarsyazilim.com.tr/share/CubesCollideWIN32.zip"
+            },
+            {
+                "img": "images/mac.png",
+                "platform": "MacOS",
+                "url": "https://sarsyazilim.com.tr/share/CubesCollideMAC.app.zip"
+            },
+            {
+                "img": "images/droid.png",
+                "platform": "Android",
+                "url": "https://sarsyazilim.com.tr/share/CubesCollideANDROID.zip"
+            }
+        ]
+    },
+    {
+        "key": "pakacraft",
+        "library_icon": "images/library/pakacraft.png",
+        "banner_icon": "images/banner/pakacraft.png",
+        "supported_langs": "en",
+        "locales": [
+            {
+                "key": "en",
+                "short_title": "Pakacraft",
+                "long_title": "Pakacraft - RPG Minecraft Server",
+                "short_desc": "Pakacraft is a Mineraft game server project. This NodeJS-based project hosts a comprehensive RPG server open to the whole world!",
+                "long_desc": "This legendary server contains: Role-play, Factions, Markets, Houses, Auction, Horses, Quests, Towers, Raids and many more. Server open to cracked players also. Server also supports mobile (pocket edition) players. You can play with anywhere anytime."
+            },
+            {
+                "key": "tr",
+                "short_title": "Pakacraft",
+                "long_title": "Pakacraft - RPG Minecraft Sunucusu",
+                "short_desc": "Pakacraft bir Mineraft oyun sunucusu projesidir. NodeJS temelli bu proje tüm dünyaya açık olan kapsamlı bir RPG sunucusunu barındırır.",
+                "long_desc": "Bu efsanevi sunucu şunları içerir: Rol yapma, Klanlar, Pazarlar, Evler, Açık Artırma, Atlar, Görevler, Kuleler, Baskınlar ve çok daha fazlası. Sunucu crackli oyunculara da açıktır. Sunucu ayrıca mobil (pocket edition) kullanan oyuncuları da destekler. İstediğiniz zaman istediğiniz yerde oynayabilirsiniz."
+            }
+        ],
+        "resources": [
+            {
+                "img": "https://pakacraft.online/images/icon.png",
+                "platform": "Website",
+                "url": "https://pakacraft.online"
+            }
+        ]
+    },
+    {
+        "key": "apfitness",
+        "library_icon": "images/library/apfitness.png",
+        "banner_icon": "images/banner/apfitness.png",
+        "supported_langs": "tr",
+        "locales": [
+            {
+                "key": "en",
+                "short_title": "APFitness",
+                "long_title": "APFitness - Trainer Helper",
+                "short_desc": "APFitness is the old version of the APGYM. It was written in java only. And it was the first big project we developed for a local business.",
+                "long_desc": "APFitness is the older version of APGYM. It was written in Java. It was the first major project we developed for a local business. It contains pages for managers, coaches and members. Coaches can record members' measurements and provide fitness programs."
+            },
+            {
+                "key": "tr",
+                "short_title": "APFitness",
+                "long_title": "APFitness - Üye Takip",
+                "short_desc": "APFitness, APGYM'nin eski versiyonudur. Java'da yazılmıştı. Yerel bir işletme için geliştirdiğimiz ilk büyük projeydi..",
+                "long_desc": "APFitness, APGYM'nin eski versiyonudur. Java'da yazılmıştı. Yerel bir işletme için geliştirdiğimiz ilk büyük projeydi. Yöneticiler, antrenörler ve üyeler için sayfalar içeriyor. Antrenörler üyelerin ölçümlerini kaydedebilir ve fitness programları sunabilir."
+            }
+        ],
+        "resources": [
+            {
+                "img": "images/droid.png",
+                "platform": "Android",
+                "url": "https://sarsyazilim.com.tr/share/APFitness.zip"
+            }
+        ]
+    }
+]

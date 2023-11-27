@@ -5,6 +5,7 @@ var { myemail, mypassword } = require('.././config');
 var { now } = require('.././date');
 var fs = require('fs/promises');
 var main = require('../main');
+var iso6391 = require('iso-639-1');
 
 // Create a transporter
 var transporter = nodemailer.createTransport({
@@ -24,32 +25,65 @@ transporter.verify((err, success) => {
   else console.log(now + 'Transporter config is correct.');
 });
 
-//GET
 router.get('/', function (req, res, next) {
   res.redirect('/index');
-});
-router.get('/index', async function (req, res, next) {
-  let views = await fs.readFile("db.json", 'utf-8');
-  views = JSON.parse(views);
-  views.viewCount++;
-  await fs.writeFile("db.json", JSON.stringify(views, null, 2));
-  res.locals.viewCount = views.viewCount;
-  res.render('index');
 });
 
 router.get('/mail_sent', function (req, res, next) { res.render('mail_sent'); });
 router.get('/not_found', function (req, res, next) { res.render('not_found'); });
-router.get('/library', function (req, res, next) { res.render('library'); });
-router.get('/library/:appName', function (req, res, next) {
-  const app_param = req.params.appName;
-  var app_title = main.getlocal(app_param);
-  var app_desc = main.getlocal(app_param + '_desc');
-  var app_slangs = main.getlocal(app_param + '_langs')
-  if (app_title === app_param || app_desc === app_param + '_desc'|| app_slangs === app_param + '_langs') {
+
+router.get('/index', async function (req, res, next) {
+  try {
+    var app_list = JSON.parse(await fs.readFile("db/apps.json", 'utf-8'));
+    var statics = JSON.parse(await fs.readFile("db/statics.json", 'utf-8'));
+    viewCount = statics.viewCount;
+    viewCount++;
+    const new_statics = {
+      viewCount: viewCount
+    };
+    await fs.writeFile("db/statics.json", JSON.stringify(new_statics));
+    let browser_lang = req.headers['accept-language'].split(',')[0]; // Tarayıcı dilini al
+    res.render('index', { app_list, browser_lang, viewCount });
+  } catch (error) {
+    console.error("Error reading apps.json:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+router.get('/library', async function (req, res, next) {
+  try {
+    var app_list = JSON.parse(await fs.readFile("db/apps.json", 'utf-8'));
+    let browser_lang = req.headers['accept-language'].split(',')[0]; // Tarayıcı dilini al
+    res.render('library', { app_list, browser_lang });
+  } catch (error) {
+    console.error("Error reading apps.json:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+router.get('/library/:appKey', async function (req, res, next) {
+  try {
+    var app_list = JSON.parse(await fs.readFile("db/apps.json", 'utf-8'));
+    var browser_lang = req.headers['accept-language'].split(',')[0]; // Tarayıcı dilini al
+    var app = app_list.find(a => a.key === req.params.appKey);
+    var langIndex = app['locales'].findIndex(l => l.key === browser_lang);
+    if (langIndex < 0)
+      langIndex = 0;
+
+    var short_title = app['locales'][langIndex].short_title;
+    var long_title = app['locales'][langIndex].long_title;
+    var short_desc = app['locales'][langIndex].short_desc;
+    var long_desc = app['locales'][langIndex].long_desc;
+    var langs = app.supported_langs.split(',');
+    var langNames = langs.map(code => iso6391.getName(code));
+    var banner_icon = app.banner_icon;
+    var resources = app.resources;
+
+    res.render('app', { short_title, long_title, short_desc, long_desc, langNames, banner_icon, resources });
+  } catch (error) {
+    console.error("Error reading apps.json:", error);
     return res.status(404).redirect('/not_found');
   }
-  var app_langs = app_slangs;
-  res.render('app', { app_title, app_desc, app_param, app_langs });
 });
 
 router.post('/form_submit', (req, res) => {

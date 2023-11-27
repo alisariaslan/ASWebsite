@@ -108,35 +108,27 @@
           </div>
           <div class="section-content text-center">
             <div class="row">
-              <div class="col-md-4">
-                <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <img src="images/apfitness.png"
-                    class="wow fadeIn" data-wow-delay="0.4s" width="100px" height="100px" />
-                  <h5>APGYM</h5>
-                  <p>
-                    <%=__('app1content')%>
-                  </p>
+              <% for (let app of app_list.slice(0, 3)) { %>
+                <div class="col-md-4">
+                  <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <img src="<%= app.library_icon%>"
+                      class="wow fadeIn" data-wow-delay="0.4s" width="100px" height="100px" />
+                      <% 
+                      let langIndex = app['locales'].findIndex(l => l.key === browser_lang);
+                      if(langIndex < 0)
+                        langIndex = 0;
+                      var short_title = app['locales'][langIndex].short_title;
+                      var short_desc = app['locales'][langIndex].short_desc;
+                      %>
+                    <h5>
+                      <%= short_title %>
+                    </h5>
+                    <p>
+                      <%= short_desc %>
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s"> <img src="images/ceppos.png"
-                    class="wow fadeIn" data-wow-delay="0.6s" width="100px" height="100px" />
-                  <h5>Ceppos</h5>
-                  <p>
-                    <%=__('app2content')%>
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="icon-box wow fadeInUp" data-wow-delay="0.6s"> <img src="images/parkor.png"
-                    class="wow fadeIn" data-wow-delay="0.8s" width="100px" height="100px" />
-                  <h5>Parkor</h5>
-                  <p>
-                    <%=__('app3content')%>
-                  </p>
-                </div>
-              </div>
+                <% } %>
             </div>
-
             <a href="/library" class="about-btn">
               <%=__('whatidobutton')%>
             </a>
