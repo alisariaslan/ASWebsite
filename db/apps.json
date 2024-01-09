@@ -1,6 +1,7 @@
 [
     {
         "key": "ceppos",
+        "app_state": 1,
         "library_icon": "images/library/ceppos.png",
         "banner_icon": "images/banner/ceppos.png",
         "supported_langs": "tr",
@@ -40,21 +41,22 @@
     },
     {
         "key": "parkor",
+        "app_state": 1,
         "library_icon": "images/library/parkor.png",
         "banner_icon": "images/banner/parkor.png",
         "supported_langs": "en,tr",
         "locales": [
             {
                 "key": "en",
-                "short_title": "Parkov",
-                "long_title": "Parkov - 2D Adventure, Horror",
+                "short_title": "Parkor",
+                "long_title": "Parkor - 2D Adventure, Horror",
                 "short_desc": "Two-dimensional cross-platform adventure, horror and thriller game. An experience with a simple story flow and lots of creatures.",
                 "long_desc": "It was a morning like any other. Jack woke up. Good morning buddy. Jack was an ordinary mature person who lived in the city, away from his family and farm life. Towards the middle of the day, people noticed something in the sky. It looked like a meteorite. When the stone hits the earth, time stops as if everything was a dream. Jack wakes up again. This time it is night and he sees something on the street..."
             },
             {
                 "key": "tr",
-                "short_title": "Parkov",
-                "long_title": "Parkov - 2D Macera, Korku",
+                "short_title": "Parkor",
+                "long_title": "Parkor - 2D Macera, Korku",
                 "short_desc": "İki boyutlu çapraz-platform macera ve gerilim oyunu. Basit bir hikaye akışı ve bir çok yaratığa ev sahipliği yapıyor.",
                 "long_desc": "Her zamanki gibi bir sabahtı. Jack uyandı. Günaydın Dostum. Jack şehirde ailesinden ve çiftlik hayatından uzak yaşayan sıradan olgun bir insandı. Günün ortalarına doğru insanlar gökyüzünde bir şey fark etti. Bu bir göktaşına benziyordu. Taşın yeryüzüne çarpmasıyla beraber sanki her şey bir anda rüyaymışçasına zaman durur. Jack yeniden uyanır. Bu sefer gecedir ve sokakta bir şey görür..."
             }
@@ -63,27 +65,28 @@
             {
                 "img": "images/unity.png",
                 "platform": "WebPlayer",
-                "url": "https://play.sarsyazilim.com.tr/parkor"
+                "url": "https://try.alisariaslan.com.tr/parkor"
             },
             {
                 "img": "images/win.png",
                 "platform": "Windows",
-                "url": "https://sarsyazilim.com.tr/share/ParkorWIN32.zip"
+                "url": "https://alisariaslan.com.tr/share/ParkorWIN32.zip"
             },
             {
                 "img": "images/mac.png",
                 "platform": "MacOS",
-                "url": "https://sarsyazilim.com.tr/share/ParkorMAC.app.zip"
+                "url": "https://alisariaslan.com.tr/share/ParkorMAC.app.zip"
             },
             {
                 "img": "images/droid.png",
                 "platform": "Android",
-                "url": "https://sarsyazilim.com.tr/share/ParkorANDROID.zip"
+                "url": "https://alisariaslan.com.tr/share/ParkorANDROID.zip"
             }
         ]
     },
     {
         "key": "cubescollide",
+        "app_state": 1,
         "library_icon": "images/library/cubescollide.png",
         "banner_icon": "images/banner/cubescollide.png",
         "supported_langs": "en",
@@ -107,22 +110,23 @@
             {
                 "img": "images/win.png",
                 "platform": "Windows",
-                "url": "https://sarsyazilim.com.tr/share/CubesCollideWIN32.zip"
+                "url": "https://alisariaslan.com.tr/share/CubesCollideWIN32.zip"
             },
             {
                 "img": "images/mac.png",
                 "platform": "MacOS",
-                "url": "https://sarsyazilim.com.tr/share/CubesCollideMAC.app.zip"
+                "url": "https://alisariaslan.com.tr/share/CubesCollideMAC.app.zip"
             },
             {
                 "img": "images/droid.png",
                 "platform": "Android",
-                "url": "https://sarsyazilim.com.tr/share/CubesCollideANDROID.zip"
+                "url": "https://alisariaslan.com.tr/share/CubesCollideANDROID.zip"
             }
         ]
     },
     {
         "key": "pakacraft",
+        "app_state": 1,
         "library_icon": "images/library/pakacraft.png",
         "banner_icon": "images/banner/pakacraft.png",
         "supported_langs": "en",
@@ -132,50 +136,51 @@
                 "short_title": "Pakacraft",
                 "long_title": "Pakacraft - RPG Minecraft Server",
                 "short_desc": "Pakacraft is a Mineraft game server project. This NodeJS-based project hosts a comprehensive RPG server open to the whole world!",
-                "long_desc": "This legendary server contains: Role-play, Factions, Markets, Houses, Auction, Horses, Quests, Towers, Raids and many more. Server open to cracked players also. Server also supports mobile (pocket edition) players. You can play with anywhere anytime."
+                "long_desc": "This legendary server contains: Role-play, Factions, Markets, Houses, Auction, Horses, Quests, Towers, Raids and many more. Server open to cracked players also. Server also supports mobile (pocket edition) players. You can play with anywhere anytime and anywhere"
             },
             {
                 "key": "tr",
                 "short_title": "Pakacraft",
                 "long_title": "Pakacraft - RPG Minecraft Sunucusu",
                 "short_desc": "Pakacraft bir Mineraft oyun sunucusu projesidir. NodeJS temelli bu proje tüm dünyaya açık olan kapsamlı bir RPG sunucusunu barındırır.",
-                "long_desc": "Bu efsanevi sunucu şunları içerir: Rol yapma, Klanlar, Pazarlar, Evler, Açık Artırma, Atlar, Görevler, Kuleler, Baskınlar ve çok daha fazlası. Sunucu crackli oyunculara da açıktır. Sunucu ayrıca mobil (pocket edition) kullanan oyuncuları da destekler. İstediğiniz zaman istediğiniz yerde oynayabilirsiniz."
+                "long_desc": "Bu efsanevi sunucu şunları içerir: Rol yapma, Klanlar, Pazarlar, Evler, Açık Artırma, Atlar, Görevler, Kuleler, Baskınlar ve çok daha fazlası. Sunucu crackli oyunculara da açıktır. Sunucu ayrıca mobil (pocket edition) kullanan oyuncuları da destekler. İstediğiniz zaman ve istediğiniz yerde oynayabilirsiniz."
             }
         ],
         "resources": [
             {
-                "img": "https://pakacraft.online/images/icon.png",
+                "img": "https://pakacraft.alisariaslan.com.tr/images/icon.png",
                 "platform": "Website",
-                "url": "https://pakacraft.online"
+                "url": "https://pakacraft.alisariaslan.com.tr"
             }
         ]
     },
     {
-        "key": "apfitness",
-        "library_icon": "images/library/apfitness.png",
-        "banner_icon": "images/banner/apfitness.png",
-        "supported_langs": "tr",
+        "key": "postwomen",
+        "app_state": 1,
+        "library_icon": "images/library/postwomen.png",
+        "banner_icon": "images/banner/postwomen.png",
+        "supported_langs": "en,tr",
         "locales": [
             {
                 "key": "en",
-                "short_title": "APFitness",
-                "long_title": "APFitness - Trainer Helper",
-                "short_desc": "APFitness is the old version of the APGYM. It was written in java only. And it was the first big project we developed for a local business.",
-                "long_desc": "APFitness is the older version of APGYM. It was written in Java. It was the first major project we developed for a local business. It contains pages for managers, coaches and members. Coaches can record members' measurements and provide fitness programs."
+                "short_title": "Postwomen",
+                "long_title": "Postwomen - Server Checker",
+                "short_desc": "With Postwomen, you can easily check whether your servers are working or not. ",
+                "long_desc": "With Postwomen, you can easily check whether your servers are working or not. Perform json comparative checks with operations with GET & POST methods. Send ping. Get notified about events! Note: Features are limited in the beta version."
             },
             {
                 "key": "tr",
-                "short_title": "APFitness",
-                "long_title": "APFitness - Üye Takip",
-                "short_desc": "APFitness, APGYM'nin eski versiyonudur. Java'da yazılmıştı. Yerel bir işletme için geliştirdiğimiz ilk büyük projeydi..",
-                "long_desc": "APFitness, APGYM'nin eski versiyonudur. Java'da yazılmıştı. Yerel bir işletme için geliştirdiğimiz ilk büyük projeydi. Yöneticiler, antrenörler ve üyeler için sayfalar içeriyor. Antrenörler üyelerin ölçümlerini kaydedebilir ve fitness programları sunabilir."
+                "short_title": "Postwomen ",
+                "long_title": "Postwomen - Sunucu Denetleyici",
+                "short_desc": "Postwomen ile sunucularınızın çalışır durumda olup olmadığı kolaylıkla kontrol edebilirsiniz.",
+                "long_desc": "Postwomen ile sunucularınızın çalışır durumda olup olmadığı kolaylıkla kontrol edebilirsiniz. Ping gönderme, GET & POST gibi işlemler ile json karşılaştırmalı kontroller yapın. Duurmlar hakkında bildirim alın! Not: Beta sürümünde özellikler kısıtlıdır."
             }
         ],
         "resources": [
             {
                 "img": "images/droid.png",
                 "platform": "Android",
-                "url": "https://sarsyazilim.com.tr/share/APFitness.zip"
+                "url": "https://alisariaslan.com.tr/share/com.asprojects.postwomen.zip"
             }
         ]
     }
