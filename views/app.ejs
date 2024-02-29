@@ -24,8 +24,10 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg" style="position:absolute;">
-    <div class="container"> <a class="navbar-brand navbar-logo" href="/index"> <img src="images/signature.png"
-          alt="signature" class="logo-1" width="160" height="40"> </a>
+    <div class="container">
+      <a class="navbar-brand navbar-logo" href="/index">
+        <img src="images/signature.png" alt="signature" class="signature" width="160" height="40">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
           class="fas fa-bars"></span> </button>
@@ -53,7 +55,9 @@
                 <%= long_desc %>
               </p>
               <p class="banner-text white locales">
-                <span><%=__('supported_langs')%> </span>
+                <span>
+                  <%=__('supported_langs')%>
+                </span>
                 <% for (let name of langNames) { %>
                   <img src="https://img.shields.io/badge/  <%=__(name)%>-000000?style=flat&logo=  <%=__(name)%>" />
                   <% } %>
@@ -88,7 +92,8 @@
                 <div class="col-md-4">
                   <a href=" <%= resource.url %>" target="_blank">
                     <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-                      <img src=" <%= resource.img %>" class="wow fadeIn" data-wow-delay="0.4s" width="100px" height="100px" />
+                      <img src=" <%= resource.img %>" class="wow fadeIn" data-wow-delay="0.4s" width="100px"
+                        height="100px" />
                       <h5>
                         <%= resource.platform %>
                       </h5>

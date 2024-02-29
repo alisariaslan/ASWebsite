@@ -24,9 +24,10 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
-    <div class="container"> <a class="navbar-brand navbar-logo" href="#"> 
-      <img src="images/signature.png" alt="signature" class="signature" width="160" height="40">
-     </a>
+    <div class="container">
+      <a class="navbar-brand navbar-logo" href="#">
+        <img src="images/signature.png" alt="signature" class="signature" width="160" height="40">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
           class="fas fa-bars"></span> </button>
@@ -72,8 +73,8 @@
                 <%=__('since')%>
               </p>
               <ul>
-                <li><a target="_blank" href="https://www.instagram.com/alisariasln/"><img src="images/insta.png" class="wow fadeInUp"
-                      data-wow-delay="0.4s" /></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/alisariasln/"><img src="images/insta.png"
+                      class="wow fadeInUp" data-wow-delay="0.4s" /></a></li>
                 <li><a target="_blank" href="https://t.me/alisariaslan"><img src="images/telegram.png"
                       class="wow fadeInUp" data-wow-delay="0.7s" /></a></li>
                 <li><a target="_blank" href="https://wa.me/905374639493"><img src="images/wp.png" class="wow fadeInUp"
@@ -83,7 +84,8 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-4 col-sm-12"> <img src="images/me.png" class="img-fluid wow fadeIn banner-image" style="margin-bottom: 50px;" /> </div>
+          <div class="col-md-4 col-sm-12"> <img src="images/me.png" class="img-fluid wow fadeIn banner-image"
+              style="margin-bottom: 50px;" /> </div>
         </div>
       </div>
     </div>
@@ -113,19 +115,15 @@
                 <div class="col-md-4">
                   <div class="icon-box wow fadeInUp" data-wow-delay="0.2s"> <img src="<%= app.library_icon%>"
                       class="wow fadeIn" data-wow-delay="0.4s" width="100px" height="100px" />
-                      <% 
-                      let langIndex = app['locales'].findIndex(l => l.key === browser_lang);
-                      if(langIndex < 0)
-                        langIndex = 0;
-                      var short_title = app['locales'][langIndex].short_title;
-                      var short_desc = app['locales'][langIndex].short_desc;
-                      %>
-                    <h5>
-                      <%= short_title %>
-                    </h5>
-                    <p>
-                      <%= short_desc %>
-                    </p>
+                    <% let langIndex=app['locales'].findIndex(l=> l.key === browser_lang);
+                      if(langIndex < 0) langIndex=0; var short_title=app['locales'][langIndex].short_title; var
+                        short_desc=app['locales'][langIndex].short_desc; %>
+                        <h5>
+                          <%= short_title %>
+                        </h5>
+                        <p>
+                          <%= short_desc %>
+                        </p>
                   </div>
                 </div>
                 <% } %>
@@ -163,7 +161,8 @@
       <div class="video-popup">
         <div class="video-src">
           <div class="iframe-src">
-            <iframe src="https://www.youtube.com/embed/Vmtt8tNdohY" title="<%=__('videotitle')%>" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Vmtt8tNdohY" title="<%=__('videotitle')%>" frameborder="0"
+              allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -183,6 +182,9 @@
             <span class="line"></span>
             <p>
               <%=__('famouscontent')%>
+            </p>
+            <p style="font-size: small; color: red;">
+              <%=__('disabled_xox')%>
             </p>
           </div>
           <div class="section-content text-center">
@@ -285,6 +287,9 @@
             <p>
               <%=__('articlecontent')%>
             </p>
+            <p style="font-size: small; color: red;">
+              <%=__('disabled_articles')%>
+            </p>
           </div>
           <div class="section-content text-center">
             <div class="row">
@@ -344,15 +349,17 @@
             <p class="white" style="text-shadow: 0px 0px 8px #000;">
               <%=__('channelcontent')%>
             </p>
+            <p style="font-size: small; color: red;">
+              <%=__('disabled_channel')%>
+            </p>
           </div>
-
           <div class="section-content">
             <div class="row">
               <div class="offset-md-2 col-md-8 col-sm-12">
                 <div class="myslider"
                   style="opacity: .9; background-color: #eaeaea; overflow: auto; padding-bottom: 16px; border-radius: 20px;">
                   <div class="slider-item">
-                    <div class="test-img"><img src="images/traveler.png" alt="Placeholder" width="157" height="157" >
+                    <div class="test-img"><img src="images/traveler.png" alt="Placeholder" width="157" height="157">
                     </div>
                     <div class="test-text"><span class="title"><span>
                           <%=__('channelheader2')%>
@@ -511,10 +518,11 @@
                       <p class="text-uppercase">
                         <%=__('mail')%>
                       </p>
-                      <p class="text-uppercase"><a class="text-black"
-                          href="mailto:acsayear@gmail.com">
-                          <%=__('mailcontent')%>
-                        </a> </p>
+                      <p class="text-lowercase">
+                        <a class="text-black" href="mailto:yearnite@outlook.com">
+                          yearnite@outlook.com
+                        </a>
+                      </p>
                     </div>
                   </div>
                   <div class="contact-item media"> <i class="fa fa-clock media-left media-right-margin-width"></i>
@@ -550,6 +558,9 @@
             <span class="line"></span>
             <p class="white">
               <%=__('storecontent')%>
+            </p>
+            <p style="font-size: small; color: red;">
+              <%=__('disabled_stores')%>
             </p>
           </div>
         </div>

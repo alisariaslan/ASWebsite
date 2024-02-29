@@ -107,6 +107,7 @@ router.post('/form_submit', (req, res) => {
     text: message,
   };
   // Send email to SENDER
+  /*
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error(now + error.message);
@@ -114,6 +115,7 @@ router.post('/form_submit', (req, res) => {
       console.log(now + 'Email sent: ' + info.response);
     }
   });
+  */
   // Send email to ME
   transporter.sendMail(mailOptions2, (error, info) => {
     if (error) {

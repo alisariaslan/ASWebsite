@@ -67,9 +67,8 @@
 	"phone": "TELEFON",
 	"phonecontent": "+905374639493",
 	"mail": "E-POSTA",
-	"mailcontent": "acsayear@gmail.com",
-	"hours": "ÇALIŞMA SAATLERİ",
-	"hourscontent": "İŞLETMENİZ İÇİN 7/24",
+	"hours": "İLETİŞİM SAATLERİ",
+	"hourscontent": "09:00 - 18:00 (UTC+3)",
 	"storeheader": "Mağazalarımı Ziyaret Edin",
 	"storecontent": "Güven ve saygı kolay kazanılmayan ve inşa etmesi uzun süren şeylerdir. Projelerimi resmi mağazalardan inceleyebilirsiniz.",
 	"viewedstart": "Bu site toplam",
@@ -78,7 +77,7 @@
 	"not_found_content": "Aradığınız sayfa bulunamadı. Adresi yanlış girmiş olabilir misiniz? Anasayfaya dönmek için aşşağıdaki butonu kullanın.",
 	"go_back": "Geri dön",
 	"mail_sent_title": "Mesajınız başarıyla iletildi.",
-	"mail_sent_content": "Mesajları en kısa sürede cevaplamaya çalışıyorum. Mesajın bana ulaştığından emin olmak istiyorsanız mail kutunuzu kontrol edebilirsiniz. Otomatik olarak mesajı aldığıma dair bir maili size iletiyorum.",
+	"mail_sent_content": "Mesajları en kısa sürede cevaplamaya çalışıyorum. Mesajınızı duruma göre kategorilendirip 'yearnite@outlook.com' mail adresi ile cevaplayacağım. İletişime geçtiğiniz için teşekkür ediyorum.",
 	"library_title": "Kütüphane",
 	"library_title2": "Geliştirici Sayfasına Göz At",
 	"library_content": "Yayına hazır veya yayınlanmış tüm projeleri içerir. Farklı platformlar için farklı versiyonlar mevcut olabilir. En güncel sürümleri burada bulabilirsiniz.",
@@ -86,5 +85,10 @@
 	"backto_library": "Kütüphaneye geri dön",
 	"supported_langs": "Desteklenen diller:",
 	"English": "İngilizce",
-	"Turkish": "Türkçe"
+	"Turkish": "Türkçe",
+	"disabled_contact": "Mail hizmetinin spam amaçlı kullanılmasından dolayı devre dışı bırakılmıştır. Lütfen manuel olarak e-mail gönderiniz.",
+	"disabled_channel":"Yetersiz zaman nedenli kanal geçici olarak kapatılmış olup videolar erişimden çekilmiştir. Daha sonra tekrar açılacaktır.",
+	"disabled_articles":"Konuların güncel olmaması sebebi ile yazılar şimdilik erişime kapalıdır.",
+	"disabled_xox":"Halen geliştirilme aşamasındadır. Herhangi bir demo son kullanıcıya sunulmamıştır.",
+	"disabled_stores":"Yetersiz zaman ve yayıncıların sürekli değişiklik istemeleri sebepli mağazalar geçici olarak erişime kapatılmıştır. Daha sonra tekrar açılacaktır."
 }

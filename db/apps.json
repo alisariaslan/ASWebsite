@@ -153,35 +153,5 @@
                 "url": "https://pakacraft.alisariaslan.com.tr"
             }
         ]
-    },
-    {
-        "key": "postwomen",
-        "app_state": 1,
-        "library_icon": "images/library/postwomen.png",
-        "banner_icon": "images/banner/postwomen.png",
-        "supported_langs": "en,tr",
-        "locales": [
-            {
-                "key": "en",
-                "short_title": "Postwomen",
-                "long_title": "Postwomen - Server Checker",
-                "short_desc": "With Postwomen, you can easily check whether your servers are working or not. ",
-                "long_desc": "With Postwomen, you can easily check whether your servers are working or not. Perform json comparative checks with operations with GET & POST methods. Send ping. Get notified about events! Note: Features are limited in the beta version."
-            },
-            {
-                "key": "tr",
-                "short_title": "Postwomen ",
-                "long_title": "Postwomen - Sunucu Denetleyici",
-                "short_desc": "Postwomen ile sunucularınızın çalışır durumda olup olmadığı kolaylıkla kontrol edebilirsiniz.",
-                "long_desc": "Postwomen ile sunucularınızın çalışır durumda olup olmadığı kolaylıkla kontrol edebilirsiniz. Ping gönderme, GET & POST gibi işlemler ile json karşılaştırmalı kontroller yapın. Duurmlar hakkında bildirim alın! Not: Beta sürümünde özellikler kısıtlıdır."
-            }
-        ],
-        "resources": [
-            {
-                "img": "images/droid.png",
-                "platform": "Android",
-                "url": "https://alisariaslan.com.tr/share/com.asprojects.postwomen.zip"
-            }
-        ]
     }
 ]

@@ -67,9 +67,8 @@
 	"phone": "PHONE",
 	"phonecontent": "+905374639493",
 	"mail": "E-MAIL",
-	"mailcontent": "acsayear@gmail.com",
-	"hours": "WORKING HOURS",
-	"hourscontent": "7/24 FOR YOUR BUSINESS",
+	"hours": "CONTACT HOURS",
+	"hourscontent": "09:00 - 18:00 (UTC+3)",
 	"storeheader": "Check My Stores",
 	"storecontent": "Trust and respect are not earned immediately and can take a long time to build. You can check my projects in official stores.",
 	"viewedstart": "This site has been viewed",
@@ -78,7 +77,7 @@
 	"not_found_content": "The page you were looking for was not found. Could you have entered the address incorrectly? Use the button below to return to the home page.",
 	"go_back": "Return",
 	"mail_sent_title": "Your message has been delivered successfully.",
-	"mail_sent_content": "I try to answer messages as soon as possible. If you want to make sure that the message reached me, you can check your mailbox. I will automatically send you an e-mail confirming that I received the message.",
+	"mail_sent_content": "I try to answer messages as soon as possible. I will reply to your message with 'yearnite@outlook.com' e-mail address, categorizing it according to the subject. Thank you for getting in touch.",
 	"library_title": "Library",
 	"library_title2": "Visit Developer Page",
 	"library_content": "It includes all projects that are ready for publication or have been published. Different versions may be available for different platforms. You can find the latest versions here..",
@@ -86,5 +85,10 @@
 	"backto_library": "Return to Library",
 	"supported_langs": "Supported languages:",
 	"English": "English",
-	"Turkish": "Turkish"
+	"Turkish": "Turkish",
+	"disabled_contact": "The e-mail service has been disabled due to its use for spam purposes. Please send an e-mail manually.",
+	"disabled_channel":"Due to insufficient time, the channel has been temporarily closed and the videos have been removed from access. It will reopen later.",
+	"disabled_articles":"Since the topics are not up to date, the articles are currently inaccessible.",
+	"disabled_xox":"It is still under development. No demo has been made available to the end user.",
+	"disabled_stores":"Due to insufficient time and publishers' constant requests for changes, the stores have been temporarily closed. It will reopen later."
 }
